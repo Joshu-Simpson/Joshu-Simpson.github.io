@@ -4,24 +4,19 @@
         <title>Yonjarobi Solos</title>
         <style>
             body {
-                background: rgb(125, 198, 205);
+                background: rgb(2, 20, 22);
                 color: rgb(45, 45, 45);
                 padding: 10px;
                 font-family: arial;
             }
-            nav {
-       background: rgb(239, 80, 41);
-       margin: 0 auto;
-       display: flex;
-       padding: 10px;
-   }
+       
             #all-contents {
               max-width: 800px;
                 margin: auto;
             }
          
             /* navigation menu */
-            nav {
+            nav {border-radius: 10% / 50% ;
                 background: rgb(239, 80, 41);
                margin: 0 auto;
                 display: flex;
@@ -30,7 +25,7 @@
             h1 {
                 display: flex;
                 align-items: center;
-                color: white;
+                color: rgb(255, 255, 255);
                 flex: 1;
                 margin: 0;
             }
@@ -41,14 +36,15 @@
                 display: inline-block;
                 padding: 0 10px;
             }
+          
             a {
                 text-decoration: none;
-                color: #fff;
+                color: rgb(33, 151, 33);
             }
          
             /* main container area beneath menu */
-            main {
-                background: rgb(245, 238, 219);
+            main {border-radius: 30px;
+                background: rgb(81, 52, 150);
                 display: flex;
             }
             .sidebar {
@@ -63,7 +59,7 @@
                 padding: 15px;
             }
             #interests {
-                border: 4px silver ridge;
+                border: 4px rgb(51, 43, 43) ridge;
                 padding: 8px;
             }
             h2, h3 {
@@ -92,21 +88,22 @@
 
         <main>
             <!-- Sidebar section -->
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIEUD4TAEpLMJuYmjNZbRIC4FTx3_SJIS7WtsQGsTH&s">
+            <div class="sidebar">
+                <img class="sidebar"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIEUD4TAEpLMJuYmjNZbRIC4FTx3_SJIS7WtsQGsTH&s">
             </div>
         
             <!-- Content section -->
-            <div>
+            <div class="content">
                 <h2>Joshua Simpson</h2>
              <p>Sauciest Man Alive</p>
             <!-- Interests section -->
-            <div>
+            <div class="intrests">
                 <h3>Intrest</h3>
                 <ul>
                     <li>Tacos</li>
                     <li>Quesadellas</li>
                     <li>Burritos</li>
+                    <li>Women</li>
                 </ul>
             </div>
         </main>
