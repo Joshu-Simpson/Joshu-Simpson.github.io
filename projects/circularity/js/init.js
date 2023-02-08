@@ -20,10 +20,16 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-
+         var circle;
+         var circles = [];
 
         // TODO 2 : Create a function that draws a circle 
-        
+        var drawCircle = function () {
+            circle = draw.randomCircleInArea(canvas, true, false, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas);
+            view.addChild(circle)
+            circles.push(circle);
+        }
 
         // TODO 3 / 7 : Call the drawCircle() function 
 
@@ -31,7 +37,9 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
-        
+        for (var drawLoopsv= 0; drawLoops< 100; drawLoops++){
+             drawCircle();
+        }
         /* 
         This Function is called 60 times/second producing 60 frames/second.
         In each frame, for every circle, it should redraw that circle
@@ -45,7 +53,10 @@ var init = function (window) {
            
 
             // TODO 9 : Iterate over the array
-           
+           for(var eachCircle = 0; eachCircle < circle.length; eachCircle++){
+            var eachValue = circles[eachCircle];
+            physikz.updatePoisition(circles[0])
+           }
             
         }
     
@@ -62,7 +73,15 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+            else if (circle.x > canvas.widith) {
+                circle.x = 0;
+            }
+            else if (circle.y > canvas,height) {
+                circle.y = canvas.height
+            }
+            else if (circle. y<0) {
+                circle.y = canvas.height
+            }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
