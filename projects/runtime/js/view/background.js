@@ -31,7 +31,7 @@ var background = function (window) {
         // TODO (several):
         var tree;
         var buildings = []
-      
+    
         // called at the start of game and whenever the page is resized
         // add objects for display in background. draws each image added to the background once
         function render() {
@@ -45,24 +45,24 @@ var background = function (window) {
             
             // TODO 2: - Add a moon and starfield
             for (var starAmount = 0; starAmount < 100; starAmount++) {
-                var circle = draw.circle(10, "white", "LightGray", 2);
+                var circle = draw.circle(10, "yellow", "black", 2);
                 circle.x = canvasWidth * Math.random();
                 circle.y = groundY * Math.random();
                 background.addChild(circle);
             }
             var moon = draw.bitmap("img/moon.png");
-            moon.x = 1500;
+            moon.x = 600;
             moon.y = 50;
             moon.scaleX = 0.5;
             moon.scaleY = 0.5;
             background.addChild(moon);          
-           
+                
 
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for (var i = 0; i < 27; ++i) {
                 var buildingHeight = (Math.random() * 300) + 50;
-                var building  = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                var building  = draw.rect(75, buildingHeight, "blue", "Black", 1);
                 building.x = 75 * i;
                 building.y = groundY - buildingHeight;
                 background.addChild(building);
@@ -89,12 +89,14 @@ var background = function (window) {
             
             // TODO 3: Part 2 - Move the tree!
             tree.x = tree.x - 1;
+            
 
 
             if (tree.x < -200) {
               tree.x = canvasWidth;
             }
            
+            
 
             
             // TODO 4: Part 2 - Parallax
@@ -106,7 +108,7 @@ var background = function (window) {
                     building.x = canvasWidth; }
             }
 
-
+              
 
 
         } // end of update function - DO NOT DELETE
